@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>astr_mods</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<div id="intro"><div><div class="orb"></div><span>ASTR_MODS</span></div></div>
+<div class="bgs"><div data-bg="cs"></div><div data-bg="mc"></div><div data-bg="gta"></div></div>
+<div class="bars" id="bars"></div><div class="veil"></div>
+
+<header>
+  <div class="brand" id="brand"><b></b>astr_mods</div>
+  <nav id="nav">
+    <a href="#mods" data-g="cs"><img src="logo-cs.png" alt="">CS 1.6 Skins</a>
+    <a href="#mods" data-g="mc"><img src="logo-mc.png" alt="">Minecraft</a>
+    <a href="#mods" data-g="gta"><img src="logo-gta.png" alt="">GTA San Andreas</a>
+  </nav>
+  <div class="head-actions">
+    <button class="premium-btn" id="premiumBtn" type="button"><span>✦</span> PREMIUM</button>
+    <button class="donate-btn" id="donateBtn" type="button"><span>♥</span> ASTRmods Donation</button>
+    <div class="prof">
+      <button id="pb" aria-label="Profile"><span id="pav"></span></button>
+      <div class="menu" id="menu"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="tag" data-i18n="tag"></span>
+    <h1 data-i18n="h1"></h1>
+    <p class="sub" data-i18n="sub"></p>
+    <div class="btns"><a class="btn w" href="#mods" data-i18n="browse"></a><button class="btn" id="up1" data-i18n="upload"></button></div>
+  </section>
+
+  <section id="mods" class="mods">
+    <div class="layout">
+      <div>
+        <div class="bar">
+          <div class="chips" id="chips"></div>
+          <div class="tools"><select id="sort"><option value="new" data-i18n="sort_new"></option><option value="pop" data-i18n="sort_pop"></option></select><input id="q" type="search" data-ph="search"></div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+      <aside class="side" id="side"></aside>
+    </div>
+  </section>
+
+  <section id="profile" class="mods pg">
+    <div class="pcard">
+      <div class="pcover" id="pcov"></div>
+      <div class="phead"><div class="pavbig" id="pavbig"></div><div><h2 id="pnick"></h2><small id="pmeta"></small></div></div>
+      <div class="pform">
+        <label><span data-i18n="nick"></span><input id="pn"></label>
+        <label><span data-i18n="fullname"></span><input id="pf"></label>
+        <label><span data-i18n="email"></span><input id="pe" type="email"></label>
+        <label><span data-i18n="pass"></span><span class="three"><input id="po" type="password" data-ph="oldpass"><input id="pn2" type="password" data-ph="newpass"><input id="pr" type="password" data-ph="repass"></span></label>
+        <label><span data-i18n="avatar"></span><input id="pavf" type="file" accept="image/*"></label>
+        <label><span data-i18n="coverp"></span><input id="pcovf" type="file" accept="image/*"></label>
+        <label><span data-i18n="youtube"></span><input id="pyt"></label>
+        <label><span data-i18n="discord"></span><input id="pdc"></label>
+        <label><span data-i18n="telegram"></span><input id="ptg"></label>
+        <label><span data-i18n="birthday"></span><input id="pbd" type="date"></label>
+        <label><span data-i18n="about"></span><textarea id="pab" rows="4"></textarea></label>
+        <p class="err" id="perr"></p>
+        <button class="btn w" id="psave" data-i18n="save"></button>
+      </div>
+    </div>
+    <div class="tabs ptabs" id="ptabs"><button data-t="pub"></button><button data-t="skins"></button><button data-t="com"></button></div>
+    <div id="pbody"></div>
+  </section>
+
+  <section id="analytics" class="mods pg">
+    <div class="section-head">
+      <div><span class="tag">ANALYTICS</span><h2>Mod ko‘rishlar statistikasi</h2><p class="subline">Import qilgan modlaringizni kim va qachon ko‘rganini batafsil kuzating.</p></div>
+      <button class="btn" id="analyticsBack">← Modlarga qaytish</button>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="chart-card">
+      <div class="chart-top"><div><h3>Kunlik ko‘rishlar</h3><small id="chartRange"></small></div><select id="chartDays"><option value="7">7 kun</option><option value="14">14 kun</option><option value="30" selected>30 kun</option></select></div>
+      <div class="chart-wrap"><canvas id="viewsChart"></canvas></div>
+    </div>
+    <div class="viewer-card"><div class="chart-top"><div><h3>Kimlar ko‘rgan?</h3><small>Username va ko‘rishlar soni</small></div></div><div id="viewerList" class="viewer-list"></div></div>
+  </section>
+
+  <section id="orders" class="mods pg">
+    <div class="section-head"><div><span class="tag">ORDERS</span><h2>Zakaz modlar</h2><p class="subline">Buyurtmalar, bajaruvchi va holatni bitta joyda boshqaring.</p></div><button class="btn w" id="newOrder">+ Zakaz berish</button></div>
+    <div class="orders-card" id="ordersList"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-brand"><strong>astr_mods</strong><span id="footerGame">Game mods • Skins • Maps • Shaders</span></div>
+  <div class="socials">
+    <a class="tg-link" href="https://t.me/web_e_commerce" target="_blank" rel="noopener" aria-label="Telegram kanal"><span class="tg-icon">✈</span><span class="tg-text">Bizga qo‘shiling</span></a>
+    <button id="footerOrder">Zakaz uchun mod →</button>
+  </div>
+</footer>
+
+<dialog id="orderDlg">
+  <h2>Zakaz uchun mod</h2><input id="ordTitle" placeholder="Qaysi mod kerak?">
+  <select id="ordGame"><option value="cs">CS 1.6</option><option value="mc">Minecraft</option><option value="gta">GTA San Andreas</option></select>
+  <textarea id="ordDesc" rows="4" placeholder="Talablaringiz, versiya, link yoki qo‘shimcha ma’lumot"></textarea>
+  <p class="err" id="ordErr"></p><button class="btn w" id="ordSubmit">Zakazni yuborish</button><button class="btn" data-close>Bekor qilish</button>
+</dialog>
+
+<dialog id="auth">
+  <div class="tabs"><button data-m="login" data-i18n="login"></button><button data-m="signup" data-i18n="signup"></button></div>
+  <input id="an" data-ph="name" autocomplete="name">
+  <input id="ae" type="email" data-ph="email" autocomplete="email">
+  <input id="ap" type="password" data-ph="pass" autocomplete="current-password">
+  <p class="err" id="aerr"></p>
+  <button class="btn w" id="asub"></button>
+  <button class="btn" data-close data-i18n="cancel"></button>
+</dialog>
+
+<dialog id="imp">
+  <h2 data-i18n="import"></h2>
+  <label class="drop" id="cdrop"><span id="ctxt" data-i18n="cover"></span><input id="mc" type="file" accept="image/*" hidden><img id="cprev" alt=""></label>
+  <input id="mt" data-ph="title">
+  <select id="mg"><option value="cs">CS 1.6</option><option value="mc">Minecraft</option><option value="gta">GTA San Andreas</option></select>
+  <select id="mcat"></select>
+  <select id="mv" aria-label="Game version"><option value="">Versiyani tanlang...</option></select>
+  <textarea id="md" rows="3" data-ph="desc"></textarea>
+  <label class="file"><span id="ftxt" data-i18n="modfile"></span><input id="mf" type="file" hidden></label>
+  <p class="err" id="ierr"></p>
+  <button class="btn w" id="isub" data-i18n="publish"></button>
+  <button class="btn" data-close data-i18n="cancel"></button>
+</dialog>
+
+<dialog id="view"><div id="vbody"></div><button class="btn" data-close data-i18n="close"></button></dialog>
+<dialog id="adminDlg" class="admin-dialog">
+  <div class="admin-head"><div><span class="tag">ADMIN PANEL</span><h2>astr_mods boshqaruv markazi</h2></div><button class="icon-close" data-close>×</button></div>
+  <div class="admin-tabs"><button class="on" data-at="dashboard">Dashboard</button><button data-at="mods">Modlar</button><button data-at="users">Userlar</button><button data-at="orders">Zakazlar</button><button data-at="games">O‘yinlar</button><button data-at="versions">Versiyalar</button></div>
+  <div id="adminBody"></div>
+</dialog>
+
+<dialog id="gameDlg">
+  <h2>Yangi o‘yin qo‘shish</h2>
+  <label class="drop"><span id="glogoT">Logo rasm tashlash (bosing)</span><input id="glogo" type="file" accept="image/*" hidden><img id="glogoP" alt=""></label>
+  <input id="gname" maxlength="40" placeholder="O‘yin nomi">
+  <label class="drop"><span id="gbgT">Orqa fon rasmi (Minecraft / CS 1.6 kabi)</span><input id="gbg" type="file" accept="image/*" hidden><img id="gbgP" alt=""></label>
+  <input id="gfoot" maxlength="120" placeholder="Footer matni (masalan: Minecraft mods • Skins • Maps)">
+  <label class="file"><span>Footer / urg‘u rangi</span><input id="gacc" type="color" value="#ff7a2f"></label>
+  <p class="err" id="gerr"></p><button class="btn w" id="gsub">Saqlash</button><button class="btn" data-close>Bekor qilish</button>
+</dialog>
+<dialog id="premiumDlg" class="premium-dialog">
+  <div class="premium-head">
+    <div>
+      <span class="tag">ASTRMODS PREMIUM</span>
+      <h2>Premium imkoniyatlar</h2>
+      <p>Reklamasiz ko‘rinish, premium badge va qo‘llab-quvvatlash imkoniyatlari.</p>
+    </div>
+    <button class="icon-close" data-close>×</button>
+  </div>
+  <div class="premium-grid">
+    <div class="premium-item"><b>✦ Premium profil</b><span>Profilingizga maxsus premium belgisi.</span></div>
+    <div class="premium-item"><b>⚡ Tezkor ko‘rinish</b><span>Premium kontent uchun alohida badge.</span></div>
+    <div class="premium-item"><b>♥ ASTRmods Donation</b><span>Loyihani ixtiyoriy ravishda qo‘llab-quvvatlang.</span></div>
+  </div>
+  <button class="btn w" id="premiumDonate">Donation oynasini ochish</button>
+</dialog>
+
+<dialog id="donationDlg" class="donation-dialog">
+  <div class="donation-head">
+    <div>
+      <span class="tag donation-tag">ASTRMODS DONATION</span>
+      <h2>Bizni qo‘llab-quvvatlang ♥</h2>
+      <p>Iltimos, bizni qo‘llab-quvvatlash uchun donnat qiling.</p>
+    </div>
+    <button class="icon-close" data-close>×</button>
+  </div>
+
+  <div class="donation-layout donation-simple">
+    <div class="card-stage">
+      <div class="visa-card" id="visaCard" aria-label="Visa TEZ donation card">
+        <div class="visa-face visa-front">
+          <div class="card-shine"></div>
+          <div class="card-top"><span class="tez-logo">TEZ</span><span class="visa-logo">VISA</span></div>
+          <div class="chip"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="card-number" id="donCardNumber">0000 0000 0000 0000</div>
+          <div class="card-bottom">
+            <div><small>CARD HOLDER</small><b>ASTRMODS</b></div>
+            <div><small>TYPE</small><b>VISA • TEZ</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="donation-form donation-message">
+      <div class="donation-thanks">
+        <div class="thanks-icon">♥</div>
+        <h3>Qo‘llab-quvvatlaganingiz uchun rahmat!</h3>
+        <p>Agar ASTRmods loyihasi sizga foydali bo‘lsa, yuqoridagi karta raqamiga istalgan miqdorda yordam yuborishingiz mumkin.</p>
+      </div>
+      <button class="btn w" id="copyDonCard" type="button">Karta raqamini nusxalash</button>
+      <button class="btn" id="donationClose" type="button">Yopish</button>
+    </div>
+  </div>
+</dialog>
+
+<div id="toast"></div>
+<script src="mods.js"></script>
+<script src="script.js"></script>
+</body></html>
